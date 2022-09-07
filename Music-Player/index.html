@@ -1,0 +1,120 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+
+<body id="body">
+    <div class="container">
+        <h1>Music Player</h1>
+        <main id="main">
+
+        </main>
+        <section id="main-section-music" class="background-cover-sec">
+            <div class="background-cover" id="back-cover"></div>
+            <section class="sec-element"></section>
+            <section class="sec-element">
+                <section class="detail-cover">
+                    <div id="cover-in-detail"></div>
+                    <div class="music-info">
+                        <p id="music-name-in-detail" class="font"></p>
+                        <p id="artist-name-in-detail"></p>
+                    </div>
+                </section>
+                <section class="detail-elements">
+                    <section class="time-sec">
+                        <p id="time-left">00:00</p>
+                        <p id="time-duration"></p>
+                    </section>
+                    <section id="timeline" class="timeline-sec">
+                        <div id="fill" class="fill-timeline"></div>
+                        <div id="fill-btn-timeline" class="fill-btn"></div>
+                    </section>
+                    <section class="play-sec">
+
+                        <div id="download-div" class="download-icon music-elements">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fafafa"
+                                class="bi bi-download" viewBox="0 0 16 16">
+                                <path
+                                    d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                <path
+                                    d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                            </svg>
+                        </div>
+
+                        <div id="shuffle-div" class="shuffle-icon music-elements">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fafafa"
+                                class="bi bi-shuffle" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z" />
+                                <path
+                                    d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z" />
+                            </svg>
+                        </div>
+
+                        <div id="before-div"  class="before-icon music-elements">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fafafa"
+                                class="bi bi-skip-start" viewBox="0 0 16 16">
+                                <path
+                                    d="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.52-.302 1.233.043 1.233.696v7.384c0 .653-.713.998-1.233.696L5 8.752V12a.5.5 0 0 1-1 0V4zm7.5.633L5.696 8l5.804 3.367V4.633z" />
+                            </svg>
+                        </div>
+
+                        <div id="play-div" class="play-icon music-elements">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fafafa" class="bi bi-pause" viewBox="0 0 16 16">
+                                <path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"/>
+                              </svg>
+                        </div>
+
+                        <div id="next-div" class="next-icon music-elements">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fafafa"
+                                class="bi bi-skip-end" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.713 3.31 4 3.655 4 4.308v7.384c0 .653.713.998 1.233.696L11.5 8.752V12a.5.5 0 0 0 1 0V4zM5 4.633 10.804 8 5 11.367V4.633z" />
+                            </svg>
+                        </div>
+
+                        <div id="repeat-div" class="repeat-icon music-elements">
+                            <svg  id="repeat-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fafafa"
+                                class="bi bi-repeat" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192Zm3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z" />
+                            </svg>
+                        </div>
+
+                        <section id="volume-section">
+                            <div id="fill-volume" ></div>
+                            <div id="fill-btn-volume"></div>
+                        </section>
+
+                        <div id="volume-div" class="volume-icon music-elements">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fafafa"
+                                class="bi bi-volume-up" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z" />
+                                <path
+                                    d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z" />
+                                <path
+                                    d="M10.025 8a4.486 4.486 0 0 1-1.318 3.182L8 10.475A3.489 3.489 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.486 4.486 0 0 1 10.025 8zM7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12V4zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11z" />
+                            </svg>
+                        </div>
+
+                    </section>
+                </section>
+            </section>
+        </section>
+    </div>
+
+    <audio id="audio"></audio>
+</body>
+<script type="module" src="./app.js"></script>
+
+</html>
